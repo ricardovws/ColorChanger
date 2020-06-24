@@ -5,4 +5,14 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="5.0.0-preview.5.20278.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Drawing">
+      <HintPath>..\..\..\..\..\Windows\WinSxS\msil_system.drawing_b03f5f7f11d50a3a_10.0.18362.1_none_4e2b25d9859fcece\System.Drawing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
