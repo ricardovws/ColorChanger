@@ -10,115 +10,167 @@ namespace ColorChanger
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hey there! :)");
-            Console.WriteLine();
-            Console.WriteLine("Please, insert the path of the image that you would like to change the colors:");
-            Console.WriteLine();
-            Console.WriteLine();
-            ConsoleColor aux = Console.ForegroundColor;
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine(@"e.g. -> path: C:\Users\Joaquim\Downloads\YOUR_PICTURE.JPEG");
-            Console.ForegroundColor = aux;
-            Console.WriteLine();
-            Console.WriteLine();
-            //Receive the path
-            Console.Write("path: ");
-            var path = Console.ReadLine();
-            Console.Clear();
-            Console.WriteLine("Alright! And now...What kind of color changing do you prefer?");
-            Console.WriteLine();
-            Console.WriteLine("Type the number of your choice:");
-            Console.WriteLine();
-            Console.WriteLine("#1 - Grayscale");
-            Console.WriteLine("#2 - Red");
-            Console.WriteLine("#3 - Green");
-            Console.WriteLine("#4 - Blue");
-            Console.WriteLine("#5 - Negative");
-            Console.WriteLine();
-            var option = Console.ReadLine();
-            Console.Clear();
-            Console.WriteLine("The file will be exported to the same file's original path.");
-            Console.WriteLine();
-            Console.WriteLine("Almost there! Please, just write the file's name: ");
-            Console.Write("File's name: ");
-            var fileName = Console.ReadLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("Just wait, please...");
+            bool keepWorking = true;
 
-            //Read the image
-            Bitmap bmp = new Bitmap(path);
-
-            //Get the imagem dimensions
-            int witdh = bmp.Width;
-            int height = bmp.Height;
-
-            //Pixel color
-            Color p;
-
-            //Set status message after export file
-            Messages messages = new Messages();
-            string finalMessage = messages.successfulMessage;
-
-
-            //starting pixel setting...
-            for (int y=0; y < height; y++)
+            while (keepWorking == true)
             {
-                for(int x = 0; x < witdh; x++)
+                Console.Clear();
+                Console.WriteLine("Hey there! :)");
+                Console.WriteLine();
+                Console.WriteLine("Please, insert the path of the image that you would like to change the colors:");
+                Console.WriteLine();
+                Console.WriteLine();
+                ConsoleColor aux = Console.ForegroundColor;
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine(@"e.g. -> path: C:\Users\Joaquim\Downloads\YOUR_PICTURE.JPEG");
+                Console.ForegroundColor = aux;
+                Console.WriteLine();
+                Console.WriteLine();
+                //Receive the path
+                Console.Write("path: ");
+                var path = Console.ReadLine();
+
+                try
                 {
-                    //get pixel value
-                    p = bmp.GetPixel(x, y);
 
-                    //extract each pixel component ARGB
-                    int a = p.A;
-                    int r = p.R;
-                    int g = p.G;
-                    int b = p.B;
+                    //Read the image and check the path:
+                    Bitmap bmp = new Bitmap(path);
 
-                    PictureParameters pic = new PictureParameters(bmp, x, y, a, r, g, b);
+                    Console.Clear();
+                    Console.WriteLine("Alright! And now...What kind of color changing do you prefer?");
+                    Console.WriteLine();
+                    Console.WriteLine("Type the number of your choice:");
+                    Console.WriteLine();
 
-                    //#1 - Grayscale
-                    if (option == "1")
+
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.WriteLine("#1 - Grayscale");
+
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("#2 - Red");
+
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("#3 - Green");
+
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine("#4 - Blue");
+
+                    Console.BackgroundColor = ConsoleColor.White;
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    Console.WriteLine("#5 - Negative");
+
+                    Console.ResetColor();
+
+                    Console.WriteLine();
+                    Console.Write("Your choice is: ");
+                    var option = Console.ReadLine();
+                    Console.Clear();
+                   
+                    //Get the imagem dimensions
+                    int witdh = bmp.Width;
+                    int height = bmp.Height;
+
+                    //Pixel color
+                    Color p;
+
+                    //Set standard status message after export file
+                    Messages messages = new Messages();
+                    string finalMessage = messages.successfulMessage;
+
+
+                    //starting pixel setting...
+                    for (int y = 0; y < height; y++)
                     {
-                        SetGrayscale(pic);
-                    }
-                    //#2 - Red
-                    else if (option == "2")
-                    {
-                        SetRedscale(pic);
-                    }
-                    //#3 - Green
-                    else if (option == "3")
-                    {
-                        SetGreenscale(pic);
-                    }
-                    //#4 - Blue
-                    else if (option == "4")
-                    {
-                        SetBluescale(pic);
-                    }
-                    //#5 - Negative
-                    else if (option == "5")
-                    {
-                        SetNegative(pic);
-                    }
-                    else
-                    {
-                        finalMessage = messages.errorMessage;
+                        for (int x = 0; x < witdh; x++)
+                        {
+                            //get pixel value
+                            p = bmp.GetPixel(x, y);
+
+                            //extract each pixel component ARGB
+                            int a = p.A;
+                            int r = p.R;
+                            int g = p.G;
+                            int b = p.B;
+
+                            PictureParameters pic = new PictureParameters(bmp, x, y, a, r, g, b);
+
+                            //#1 - Grayscale
+                            if (option == "1")
+                            {
+                                SetGrayscale(pic);
+                            }
+                            //#2 - Red
+                            else if (option == "2")
+                            {
+                                SetRedscale(pic);
+                            }
+                            //#3 - Green
+                            else if (option == "3")
+                            {
+                                SetGreenscale(pic);
+                            }
+                            //#4 - Blue
+                            else if (option == "4")
+                            {
+                                SetBluescale(pic);
+                            }
+                            //#5 - Negative
+                            else if (option == "5")
+                            {
+                                SetNegative(pic);
+                            }
+                            else
+                            {
+                                finalMessage = messages.errorMessage;
+                            }
+
+                        }
                     }
 
+                                      
+                    if (finalMessage == messages.successfulMessage)
+                    {
+                        //Asking about file name:
+                        Console.WriteLine("The file will be exported to the same file's original path.");
+                        Console.WriteLine();
+                        Console.WriteLine("Almost there! Please, just write the file's name: ");
+                        Console.Write("File's name: ");
+                        var fileName = Console.ReadLine();
+                        Console.WriteLine();
+                        Console.WriteLine();
+                        Console.WriteLine("Just wait, please...");
+
+                        //Export file
+                        ExportFile(bmp, path, fileName);
+                    }
+
+                    //Return status and finish task!
+                    Console.WriteLine(finalMessage);
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.WriteLine("Would you like to try with another one?");
+                    Console.WriteLine("Type 'y' to yes and anything else to 'no':");
+                    var answer = Console.ReadLine();
+                    if (answer != "y")
+                    {
+                        keepWorking = false;
+                    }
                 }
-            }
-
-            //Export file
-            if (finalMessage == messages.successfulMessage)
-            {
-                ExportFile(bmp, path, fileName);
-            }
-                                   
-            //Return status and finish task!
-            Console.WriteLine(finalMessage);
-            Console.ReadLine();
+                catch (Exception e)
+                {
+                    Console.WriteLine("Oups! There is an error here:");
+                    Console.WriteLine(e.Message);
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.WriteLine("Would you like to try again?");
+                    Console.WriteLine("Type 'y' to yes and anything else to 'no':");
+                    var answer = Console.ReadLine();
+                    if (answer != "y")
+                    {
+                        keepWorking = false;
+                    }
+                }
+            }            
         }
 
       
