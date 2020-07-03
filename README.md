@@ -1,5 +1,5 @@
 <a download="/screenshots/screenshot_2.png" href="/screenshots/" title="ImageName">
-    <img alt="ImageName" src="screenshots/">
+    <img alt="ImageName" src="screenshots/screenshot_2.png">
 </a>
 
 # ColorChanger
