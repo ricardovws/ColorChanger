@@ -1,4 +1,4 @@
-<a download="screenshot_2.png" href="/screenshots/" title="ImageName">
+<a download="/screenshots/screenshot_2.png" href="/screenshots/" title="ImageName">
     <img alt="ImageName" src="screenshots/">
 </a>
 
