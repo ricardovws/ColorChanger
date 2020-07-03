@@ -8,10 +8,7 @@ Just clone or download the code and run it using Visual Studio. Or just download
 Just follow the steps below and be happy :)
 
 1)
-
-![](screenshots/screenshot_1.png)
-
-<img src="screenshots/screenshot_1.png" width="40%">
+<img src="screenshots/screenshot_1.png" width="75%">
 
 2)
 
