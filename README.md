@@ -26,6 +26,8 @@ Just follow the steps below and be happy :)
 ### ...and you will got something like that:
 
 
+<img src="screenshots/final_one.png" width="70%">
+
 
 
 
