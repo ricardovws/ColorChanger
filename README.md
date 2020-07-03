@@ -1,4 +1,4 @@
-<a href="/screenshots/screenshot_2.png" download>Download it</a>
+<a href="https://github.com/ricardovws/ColorChanger/raw/master/ColorChanger_exe.rar" download>Download it</a>
 
 # ColorChanger
 A simple C# console application that converts an image into grayscale, red, green, blue and negative mode. It was built to understand how RGBA color model works.
