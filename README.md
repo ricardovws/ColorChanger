@@ -9,7 +9,9 @@ Just follow the steps below and be happy :)
 
 1)
 
-![](screenshots/screenshot_1.png =24x48)
+![](screenshots/screenshot_1.png)
+
+<img src="screenshots/screenshot_1.png" width="40%">
 
 2)
 
