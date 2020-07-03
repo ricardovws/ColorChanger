@@ -23,7 +23,7 @@ Just follow the steps below and be happy :)
 5)
 <img src="screenshots/screenshot_5.png" width="70%">
 
-### ...and you will got something like that:
+### ...and you will got something like this:
 
 
 <img src="screenshots/final_one.png" width="70%">
