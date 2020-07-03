@@ -9,7 +9,7 @@ Just follow the steps below and be happy :)
 
 1)
 
-![](screenshots/screenshot_1.png){:height="24px" width="48px"}
+![](screenshots/screenshot_1.png =24x48)
 
 2)
 
