@@ -9,6 +9,8 @@ Just follow the steps below and be happy :)
 
 1)
 
+![](screenshots/screenshot_1.png =100x100)
+
 2)
 
 3)
