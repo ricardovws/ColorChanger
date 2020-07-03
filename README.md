@@ -1,5 +1,4 @@
-<a download="/screenshots/screenshot_2.png" href="/screenshots/" title="ImageName">
-</a>
+<a href="/screenshots/screenshot_2.png" download>Download it</a>
 
 # ColorChanger
 A simple C# console application that converts an image into grayscale, red, green, blue and negative mode. It was built to understand how RGBA color model works.
