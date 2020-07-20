@@ -9,25 +9,25 @@ You can clone or download the code and run it using Visual Studio. Or just downl
 Just follow the steps below and be happy :)
 
 1)
-<img src="screenshots/screenshot_1.png" width="70%">
+<img src="screenshots/screenshot_1.png" width="80%">
 
 2)
-<img src="screenshots/screenshot_2.png" width="70%">
+<img src="screenshots/screenshot_2.png" width="80%">
 
 3)
-<img src="screenshots/screenshot_3.png" width="70%">
+<img src="screenshots/screenshot_3.png" width="80%">
 
 
 4)
-<img src="screenshots/screenshot_4.png" width="70%">
+<img src="screenshots/screenshot_4.png" width="80%">
 
 5)
-<img src="screenshots/screenshot_5.png" width="70%">
+<img src="screenshots/screenshot_5.png" width="80%">
 
 ### ...and you will got something like this:
 
 
-<img src="screenshots/final_one.png" width="70%">
+<img src="screenshots/final_one.png" width="80%">
 
 
 
